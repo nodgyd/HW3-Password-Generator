@@ -25,36 +25,47 @@ generateBtn.addEventListener("click", writePassword);
 //function that gets password lenth from user
 function generatePassword() {
 
-    var passLength = getPassLength()
+    var length = 
     // decide whether user wants to include upper case letters in password 
     var hasUpper = confirm("Would you like Upper Case Characters?!")
     var hasLower = confirm("Would you like Lower Case Characters?!")
     var hasNumber = confirm("Would you like numbers?!")
     var hasSpecial = confirm("Would you like Special Characters?!")
-
+    console.log=(length)
     // 4 positive condition
     if (hasUpper && hasLower && hasNumber && hasSpecial) {
-        characters = upper.concat(lower, numbers, specialChar)
+        characters = characters.concat(upper, lower, numbers, specialChar)
     } 
-    
+ 
+    // 3 positive conditions
+    if(hasUpper && hasLower && hasNumber) {
+        characters = characters.concat(upper, lower, numbers)
+    } else if(hasUpper && hasNumber && hasSpecial) {
+        characters = characters.concat(upper, numbers, specialChar)
+    } else (hasLower && hasNumber && hasSpecial) 
+        characters = characters.concat(lower, numbers, specialChar)
+
+
+
+
+    // function that generates 1 random character from an array of characters
+    // when generating if choose length 8, gonna run for loop for 8 iterations
     var randomPass = [];
-    for (var i = 0; i < passLength; i++) {
+    for (var i = 0; i < length; i++) {
         var randomChar = characters[Math.floor(Math.random()* characters.length)]
         randomPass.push(randomChar);  
     }
     password = randomPass.join("");
-    // when generating if choose length 8, gonna run for loop for 8 iterations
     
-    // create prompt interaction for the number of password between 8 and 128 characters 
-    //recursively gather input and validate input until valid
+    return(password) 
+    
+    
     function getPassLength(){
         var passLength = prompt("Input a password length between 8 and 128 characters!");
         if(passLength < 8 || passLength > 128 || isNaN(passLength)){
-            alert("Please Input a number between 8 and 128!")
-            return getPassLength();
+        alert("Please Input a number between 8 and 128!");
         }
+        return(getPassLength)
     }
-    console.log(getPassLength())
-    return(password)  
+
 }
-// function that generates 1 random character from an array of characters
