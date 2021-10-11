@@ -1,92 +1,60 @@
-# 03 JavaScript: Password Generator
+# <Password-Generator>
 
-## Your Task
+## Description
+- The motivation behind the project was to create an effective password generator with specific guidelines and conditions!
+- I built this project to depend my knowledge on the fundamentals of Javascript and how to setup functions and logic correctly and efficiently.
+- This solved multiple issues and was a big challenge for me personally since I had to really learn interactions and how to setup syntax correctly.
+- I learned a lot about logical operators, hoisting, if statements, for loops, and etc.! (Definitely the most impactful project so far!)
 
-This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+## Table of Contents (Optional)
+If your README is long, add a table of contents to make it easy for users to find what they need.
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Features](#features)
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+## Installation
+Create a new repository on your GitHub account and clone it to your computer.
 
-## User Story
+When you're ready to deploy, use the git add, git commit, and git push commands to save and push your code to your GitHub repository.
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
 
-## Acceptance Criteria
+## Usage
+[Project.io](https://nodgyd.github.io/HW3-Password-Generator/)
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+[screenshot1][./Assets/screenshot1.png]
 
-## Mock-Up
 
-The following image shows the web application's appearance and functionality:
+## Credits
+List your collaborators, if any, with links to their GitHub profiles.
+If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+If you followed tutorials, include links to those here as well.
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+## License
+MIT License
 
-## Grading Requirements
+Copyright (c) 2021 nodgyd
 
-This homework is graded based on the following criteria: 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Technical Acceptance Criteria: 40%
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
+## Features
+-Prompt menu opens with 5 preset conditions user needs to integrate through.
+-Then after user inputs the desired conditions random password to be generated.
 
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

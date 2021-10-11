@@ -10,44 +10,81 @@ function writePassword() {
 
 }
 
+//have an array - global scope to store characters
 var characters = [];
-
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
 var lower = "abcdefhijklmnopqrstuvwxyz".split('');
 var numbers = "1234567890".split('')
 var specialChar = "!@#$%^&*()-+".split('')
-//have an array - global scope to store characters
-
+// boolean for the confirm window operator
+var hasUpper;
+var hasLower;
+var hasNumber;
+var hasSpecial;
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 //function that will gather user input, generate random password, IMPORTANT returns the generated password at the end
-//function that gets password lenth from user
 function generatePassword() {
+    
+    var length = parseInt(prompt("Please enter a number between 8 and 128!"))
+    // Length validation statement 
+    if(!length){
+        retu = alert("This needs a value");
+        // confirm value 
+    } else if ((length < 8 || length > 128)) {
+        alert("Please Input a number between 8 and 128!");
+        return(retu) 
+    
+        // decide the rest of the conditions
+    } else {
+        hasUpper = confirm("Would you like Upper Case Characters?!")
+        hasLower = confirm("Would you like Lower Case Characters?!")
+        hasNumber = confirm("Would you like Numbers?!")
+        hasSpecial = confirm("Would you like Special Characters?!")
+    };
+     
+    // 4 negative condition 
+    if (!hasUpper && !hasLower && !hasNumber && !hasSpecial){
+        alert("You must select a criteria!")
+    }
 
-    var length = 
-    // decide whether user wants to include upper case letters in password 
-    var hasUpper = confirm("Would you like Upper Case Characters?!")
-    var hasLower = confirm("Would you like Lower Case Characters?!")
-    var hasNumber = confirm("Would you like numbers?!")
-    var hasSpecial = confirm("Would you like Special Characters?!")
-    console.log=(length)
+
     // 4 positive condition
     if (hasUpper && hasLower && hasNumber && hasSpecial) {
-        characters = characters.concat(upper, lower, numbers, specialChar)
-    } 
- 
-    // 3 positive conditions
-    if(hasUpper && hasLower && hasNumber) {
-        characters = characters.concat(upper, lower, numbers)
+        characters = upper.concat(lower, numbers, specialChar)
+    } // 3 positive conditions
+     else if(hasUpper && hasLower && hasNumber) {
+        characters = upper.concat(lower, numbers)
     } else if(hasUpper && hasNumber && hasSpecial) {
-        characters = characters.concat(upper, numbers, specialChar)
-    } else (hasLower && hasNumber && hasSpecial) 
-        characters = characters.concat(lower, numbers, specialChar)
-
-
-
-
+        characters = upper.concat(numbers, specialChar)
+    } else if (hasLower && hasNumber && hasSpecial) {    
+        characters = lower.concat(numbers, specialChar)
+    // 2 positive conditions
+    } else if (hasUpper && hasLower) {
+        characters = upper.concat(lower)
+    } else if (hasUpper && hasNumber) {
+        characters = upper.concat(numbers)
+    } else if (hasUpper && hasSpecial){
+        characters = upper.concat(specialChar)
+    } else if(hasLower && hasNumber) {
+        characters = lower.concat(numbers)
+    } else if (hasLower && hasSpecial) {
+        characters = lower.concat(specialChar)
+    } else if (hasNumber && hasSpecial) {
+        characters = numbers.concat(specialChar)
+    // 1 positive condition
+    } else if (hasUpper) {
+        characters = upper;
+    } else if (hasLower) {
+        characters = lower;
+    } else if (hasNumber) {
+        characters = numbers;
+    } else if (hasSpecial) {
+        characters = specialChar;
+    }
+    
+    
     // function that generates 1 random character from an array of characters
     // when generating if choose length 8, gonna run for loop for 8 iterations
     var randomPass = [];
@@ -60,12 +97,8 @@ function generatePassword() {
     return(password) 
     
     
-    function getPassLength(){
-        var passLength = prompt("Input a password length between 8 and 128 characters!");
-        if(passLength < 8 || passLength > 128 || isNaN(passLength)){
-        alert("Please Input a number between 8 and 128!");
-        }
-        return(getPassLength)
-    }
 
+    
+    
+    
 }
