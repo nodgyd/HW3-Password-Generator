@@ -23,7 +23,7 @@ Navigate to your GitHub repository in the browser and then select the Settings t
 ## Usage
 [Project.io](https://nodgyd.github.io/HW3-Password-Generator/)
 
-[screenshot1][./Assets/screenshot1.png]
+[screenshot1](./Assets/screenshot1.png)
 
 
 ## Credits
